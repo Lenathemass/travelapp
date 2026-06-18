@@ -1,11 +1,32 @@
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { ArrowLeft, MapPin } from "lucide-react";
-import places from "../data/places";
+import localPlaces from "../data/places";
 
 function Details() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const place = places.find((p) => p.id === Number(id));
+  
+  const [place, setPlace] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const foundPlace = localPlaces.find(p => p.id.toString() === id);
+    if (foundPlace) {
+      setPlace(foundPlace);
+    } else {
+      console.error('Not found');
+    }
+    setIsLoading(false);
+  }, [id]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <h2 className="text-3xl font-bold text-white mb-4">Loading...</h2>
+      </div>
+    );
+  }
 
   if (!place) {
     return (
@@ -27,7 +48,7 @@ function Details() {
       {/* Hero Section */}
       <div className="relative h-[60vh] md:h-[70vh] w-full bg-[#12141a]">
         <img 
-          src={place.image} 
+          src={place.image.startsWith('/') ? import.meta.env.BASE_URL + place.image.slice(1) : place.image} 
           alt={place.name} 
           className="w-full h-full object-cover opacity-80"
         />

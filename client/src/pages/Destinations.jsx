@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { MapPin } from "lucide-react";
-import places from "../data/places";
 import SearchBar from "../components/SearchBar";
+import localPlaces from "../data/places";
 
 const Destinations = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const query = searchParams.get('q') || '';
+
+  const [places, setPlaces] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setPlaces(localPlaces);
+    setIsLoading(false);
+  }, []);
 
   let searchResults = places.filter(place => 
     place.name.toLowerCase().includes(query.toLowerCase()) || 
@@ -136,7 +144,7 @@ const Destinations = () => {
     <div key={place.id} className="group relative rounded-3xl overflow-hidden bg-[#12141a] border border-gray-800 hover:border-gray-600 transition-colors flex flex-col">
       <div className="aspect-[4/3] overflow-hidden relative">
         <img
-          src={place.image}
+          src={place.image.startsWith('/') ? import.meta.env.BASE_URL + place.image.slice(1) : place.image}
           alt={place.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
@@ -158,6 +166,10 @@ const Destinations = () => {
       </div>
     </div>
   );
+
+  if (isLoading) {
+    return <div className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32"><div className="text-2xl font-bold text-white mb-4 uppercase">Loading Destinations...</div></div>;
+  }
 
   return (
     <div className="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-[1400px] mx-auto min-h-screen">

@@ -68,6 +68,41 @@ const places = [
     region: "Tamil Nadu",
     image: "/images/kodaikanal.jpg",
     description: "The Princess of Hill Stations. A tranquil getaway featuring star-shaped lakes, misty cliffs, and luxury eco-resorts nestled perfectly amidst the rolling hills."
+  },
+  {
+    id: 11,
+    name: "Athirappilly Waterfalls, Kerala",
+    region: "Kerala",
+    image: "/images/athirappilly.png",
+    description: "Known as the Niagara of India, Athirappilly Falls is the largest waterfall in Kerala. Enjoy breathtaking views of the cascading waters amidst lush green forests."
+  },
+  {
+    id: 12,
+    name: "Adiyogi Shiva Statue, Coimbatore",
+    region: "Tamil Nadu",
+    image: "/images/adiyogi.png",
+    description: "A monumental 112-foot steel statue of Shiva located at the Isha Yoga Center in Coimbatore. It is recognized by the Guinness World Records as the largest bust sculpture in the world."
+  },
+  {
+    id: 13,
+    name: "Munnar, Kerala",
+    region: "Kerala",
+    image: "/images/munnar.png",
+    description: "Famous for its lush tea estates, winding lanes, and misty hills. Munnar is a breathtakingly beautiful haven of peace and tranquility."
+  },
+  {
+    id: 14,
+    name: "Manali, Himachal Pradesh",
+    region: "Himachal Pradesh",
+    image: "/images/manali.png",
+    description: "A high-altitude Himalayan resort town known for its snow-capped mountains, scenic valleys, and vibrant culture. A paradise for nature lovers and adventure seekers."
+  },
+  {
+    id: 15,
+    name: "Coonoor, Tamil Nadu",
+    region: "Tamil Nadu",
+    image: "/images/coonoor.png",
+    description: "A peaceful hill station known for its production of Nilgiri tea. Explore sweeping grassy meadows, lush tea estates, and picturesque viewpoints away from the bustling city."
   }
 ];
 
