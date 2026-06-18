@@ -37,7 +37,7 @@ const Navbar = () => {
         <Link to="/" className="text-2xl font-bold tracking-[0.2em] text-white uppercase">
           Luxe
         </Link>
-        
+
         <div className="hidden md:flex items-center gap-8 text-[11px] font-semibold tracking-widest text-gray-300">
           <Link to="/destinations" className="hover:text-white transition-colors uppercase border-b border-transparent hover:border-white pb-1">Destinations</Link>
           <a href="/#experiences" className="hover:text-white transition-colors uppercase border-b border-transparent hover:border-white pb-1">Experiences</a>
@@ -55,7 +55,7 @@ const Navbar = () => {
             <span className="text-[11px] font-semibold tracking-widest text-white uppercase flex items-center gap-2">
               <User size={14} /> {user.name}
             </span>
-            <button 
+            <button
               onClick={handleLogout}
               className="text-gray-300 hover:text-red-400 transition-colors"
               title="Logout"
@@ -65,13 +65,13 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <button 
+            <button
               onClick={() => navigate('/login')}
               className="text-[11px] font-semibold tracking-widest text-gray-300 hover:text-white uppercase transition-colors"
             >
               Login
             </button>
-            <button 
+            <button
               onClick={() => navigate('/register')}
               className="bg-blue-500 hover:bg-blue-400 text-white text-[11px] font-semibold tracking-widest uppercase px-6 py-2.5 rounded-full transition-colors shadow-[0_0_15px_rgba(59,130,246,0.3)]"
             >
