@@ -12,6 +12,7 @@ function Login() {
     const user = JSON.parse(localStorage.getItem("user"));
 
     if (user && email === user.email && password === user.password) {
+      window.dispatchEvent(new Event('authChange'));
       navigate("/");
     } else {
       alert("Invalid Credentials");

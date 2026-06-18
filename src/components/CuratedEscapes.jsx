@@ -32,7 +32,7 @@ const CuratedEscapes = () => {
             className="group relative rounded-3xl overflow-hidden aspect-[4/3] md:aspect-[16/10] cursor-pointer"
           >
             <img 
-              src="https://images.unsplash.com/photo-1533580579895-3bc636c7a6e1?q=80&w=2938&auto=format&fit=crop" 
+              src="/images/amalfi.jpg" 
               alt="Amalfi Coast" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

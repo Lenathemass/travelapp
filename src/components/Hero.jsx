@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[85vh] min-h-[600px] flex flex-col items-center justify-center overflow-hidden bg-black pt-20">
+    <div className="relative w-full h-[85vh] min-h-[600px] flex flex-col items-center justify-center bg-black pt-20">
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2940&auto=format&fit=crop" 
