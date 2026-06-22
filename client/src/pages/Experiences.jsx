@@ -40,11 +40,16 @@ const ExperienceCard = ({ icon: Icon, title, description, price, rating, iconCol
   );
 };
 
-const EliteExperiences = () => {
+const Experiences = () => {
   return (
-    <section id="experiences" className="bg-[var(--color-brand-dark)] py-24 px-6 md:px-12 lg:px-24">
+    <div className="bg-[var(--color-brand-dark)] min-h-screen pt-32 pb-24 px-6 md:px-12 lg:px-24">
       <div className="max-w-[1400px] mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-16 text-center">Elite Experiences</h2>
+        <div className="mb-16 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-wider">Elite Experiences</h1>
+          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Discover our collection of unparalleled journeys. From private yacht charters in the Mediterranean to exclusive safari camps in the Serengeti, every experience is crafted to perfection.
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ExperienceCard 
@@ -73,10 +78,37 @@ const EliteExperiences = () => {
             description="Serengeti luxury tented camps. Helicopter transfers and private game drives led by expert conservationists."
             price="$15,200"
           />
+          
+          <ExperienceCard 
+            icon={Compass}
+            iconColor="text-yellow-400"
+            title="Desert Oasis Escape"
+            rating="4.9"
+            description="Experience the magic of the Arabian desert with a luxury glamping retreat, private falconry displays, and stargazing."
+            price="$5,500"
+          />
+
+          <ExperienceCard 
+            icon={Leaf}
+            iconColor="text-emerald-400"
+            title="Rainforest Canopy Resort"
+            rating="4.7"
+            description="Immerse yourself in the Amazon in an eco-luxury treehouse. Guided nocturnal wildlife tours and private river cruises."
+            price="$6,800"
+          />
+
+          <ExperienceCard 
+            icon={Anchor}
+            iconColor="text-cyan-400"
+            title="Arctic Icebreaker Expedition"
+            rating="5.0"
+            description="Voyage to the North Pole on a luxury icebreaker. Kayaking among icebergs and exclusive polar bear viewing safaris."
+            price="$22,000"
+          />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default EliteExperiences;
+export default Experiences;

@@ -6,6 +6,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Destinations from "./pages/Destinations";
 import Details from "./pages/Details";
+import Experiences from "./pages/Experiences";
+import Journal from "./pages/Journal";
+import Concierge from "./pages/Concierge";
 import "./index.css";
 import Navbar from "./components/Navbar";
 
@@ -20,6 +23,9 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/details/:id" element={<Details />} />
+          <Route path="/experiences" element={<Experiences />} />
+          <Route path="/journal" element={<Journal />} />
+          <Route path="/concierge" element={<Concierge />} />
         </Routes>
       </div>
       <Footer />

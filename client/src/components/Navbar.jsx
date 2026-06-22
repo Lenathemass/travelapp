@@ -40,9 +40,9 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8 text-[11px] font-semibold tracking-widest text-gray-300">
           <Link to="/destinations" className="hover:text-white transition-colors uppercase border-b border-transparent hover:border-white pb-1">Destinations</Link>
-          <a href="/#experiences" className="hover:text-white transition-colors uppercase border-b border-transparent hover:border-white pb-1">Experiences</a>
-          <a href="/#journal" className="hover:text-white transition-colors uppercase border-b border-transparent hover:border-white pb-1">Journal</a>
-          <a href="/#concierge" className="hover:text-white transition-colors uppercase border-b border-transparent hover:border-white pb-1">Concierge</a>
+          <Link to="/experiences" className="hover:text-white transition-colors uppercase border-b border-transparent hover:border-white pb-1">Experiences</Link>
+          <Link to="/journal" className="hover:text-white transition-colors uppercase border-b border-transparent hover:border-white pb-1">Journal</Link>
+          <Link to="/concierge" className="hover:text-white transition-colors uppercase border-b border-transparent hover:border-white pb-1">Concierge</Link>
         </div>
       </div>
 
